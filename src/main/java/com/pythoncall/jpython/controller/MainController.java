@@ -12,7 +12,7 @@ public class MainController {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);
 
-  @RequestMapping(value = "/employees", method = RequestMethod.GET)
+  @RequestMapping(value = "/callingPythonFromJava", method = RequestMethod.GET)
   public String callPython() {
     try {
       return Main.callingPythonFromJava("coma", "coma", "coma", "coma", "coma");

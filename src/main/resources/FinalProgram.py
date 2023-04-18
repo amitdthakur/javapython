@@ -1,6 +1,7 @@
 from tkinter import *
 import numpy as np
 import pandas as pd
+import sys
 
 #List of the symptoms is listed here in list l1.
 
@@ -42,7 +43,7 @@ l2=[]
 for i in range(0,len(l1)):
     l2.append(0)
 
-df=pd.read_csv("D:\\CSV\\Original\\Prototype.csv")
+df=pd.read_csv("D:\\Softwares\\Code\\CSV\\Prototype.csv")
 
 #Replace the values in the imported file by pandas by the inbuilt function replace in pandas.
 
@@ -70,7 +71,7 @@ np.ravel(y)
 
 #Read a csv named Testing.csv
 
-tr=pd.read_csv("D:\\CSV\\Original\\Prototype-1.csv")
+tr=pd.read_csv("D:\\Softwares\\Code\\CSV\\Prototype-1.csv")
 
 #Use replace method in pandas.
 
