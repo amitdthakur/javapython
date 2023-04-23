@@ -1,5 +1,6 @@
 package com.pythoncall.jpython.main;
 
+import com.pythoncall.jpython.pojo.OutPut;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class Main {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 
-  public static String callingPythonFromJava(String symptom1, String symptom2, String symptom3,
+  public static OutPut callingPythonFromJava(String symptom1, String symptom2, String symptom3,
       String symptom4, String symptom5) throws Exception {
     ProcessBuilder processBuilder = new ProcessBuilder("python",
         //Program name and arguments
@@ -23,8 +24,8 @@ public class Main {
     processBuilder.redirectErrorStream(true);
     Process process = processBuilder.start();
     List<String> results = readProcessOutput(process.getInputStream());
-    LOGGER.info("Output {}", results);
-    return results.get(0);
+    LOGGER.info("Predicated disease {}", results);
+    return new OutPut(results.get(0));
   }
 
   private static List<String> readProcessOutput(InputStream inputStream) throws IOException {
@@ -38,6 +39,5 @@ public class Main {
     File file = new File("src/main/resources/" + filename);
     return file.getAbsolutePath();
   }
-
 
 }
