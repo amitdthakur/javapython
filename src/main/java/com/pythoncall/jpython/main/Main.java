@@ -19,7 +19,7 @@ public class Main {
       String symptom4, String symptom5) throws Exception {
     ProcessBuilder processBuilder = new ProcessBuilder("python",
         //Program name and arguments
-        resolvePythonScriptPath("FinalProgram.py"), symptom1, symptom2, symptom3, symptom4,
+        resolvePythonScriptPath("python/FinalProgram.py"), symptom1, symptom2, symptom3, symptom4,
         symptom5);
     processBuilder.redirectErrorStream(true);
     Process process = processBuilder.start();
